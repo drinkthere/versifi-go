@@ -8,7 +8,7 @@ import (
 	"os"
 	"os/signal"
 
-	versifi "github.com/versifi/versifi-go-sdk"
+	versifi "github.com/drinkthere/versifi-go"
 )
 
 func main() {

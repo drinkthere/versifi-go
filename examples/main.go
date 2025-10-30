@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	versifi "github.com/versifi/versifi-go-sdk"
+	versifi "github.com/drinkthere/versifi-go"
 )
 
 func main() {
@@ -41,8 +41,8 @@ func createAlgoOrder(client *versifi.Client) {
 
 	// Create TWAP order
 	params := map[string]interface{}{
-		"duration":   3600,    // 1 hour in seconds
-		"slice_size": 0.1,     // 10% of total quantity per slice
+		"duration":   3600, // 1 hour in seconds
+		"slice_size": 0.1,  // 10% of total quantity per slice
 	}
 
 	response, err := client.NewCreateAlgoOrderService().

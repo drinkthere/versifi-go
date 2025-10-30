@@ -272,6 +272,11 @@ func (c *Client) NewGetOrderService() *GetOrderService {
 	return &GetOrderService{c: c}
 }
 
+// NewGetOrderService creates a new GetOrderService
+func (c *Client) NewListOpenOrdersService() *ListOpenOrdersService {
+	return &ListOpenOrdersService{c: c}
+}
+
 // NewCancelBatchOrderService creates a new CancelBatchOrderService
 func (c *Client) NewCancelBatchOrderService() *CancelBatchOrderService {
 	return &CancelBatchOrderService{c: c}

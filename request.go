@@ -25,15 +25,15 @@ func (r *request) setParam(key string, value string) *request {
 	return r
 }
 
+type params[T any] map[string]T
+
 // setParams sets multiple query parameters
-func (r *request) setParams(m params) *request {
+func (r *request) setParams(m params[string]) *request {
 	for k, v := range m {
 		r.setParam(k, v)
 	}
 	return r
 }
-
-type params map[string]interface{}
 
 // RequestOption defines a function that modifies a request
 type RequestOption func(*request)
